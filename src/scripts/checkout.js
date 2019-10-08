@@ -7,7 +7,8 @@ const cartBody = document.getElementById("cartBody");
 function currency(number) {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "USD"
+    currency: "USD",
+    minimumFractionDigits: 0
   }).format(number);
 }
 
@@ -79,7 +80,7 @@ const template = function(product) {
         <div class="cart__name">${name}</div>
         <div class="cart__desc">${id}</div>
       </div>
-      <div class="cart__price">${price * quantity}</div>
+      <div class="cart__price">${currency(price * quantity)}</div>
       
       <div class="cart__quantity">
         <input
@@ -120,11 +121,12 @@ function updatePrice(subTotal, tax) {
   const priceTable = document.querySelector(".price");
   priceTable.innerHTML = priceTemlpate(subTotal, tax);
 }
-(function() {
+
+window.onload = function() {
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
       myCart = data;
       createCart(myCart);
     });
-})();
+};

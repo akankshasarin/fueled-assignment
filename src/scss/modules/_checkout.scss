@@ -67,9 +67,5 @@
 
   &__amount {
     font-weight: $bold;
-
-    &::before {
-      content: "$";
-    }
   }
 }

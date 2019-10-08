@@ -52,9 +52,6 @@
 
   &__price {
     font-size: $font-size-lg;
-    &::before {
-      content: "$ ";
-    }
   }
 
   &__input {
