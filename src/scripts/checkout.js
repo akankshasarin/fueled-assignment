@@ -30,12 +30,16 @@ const priceTemlpate = function(subTotal, tax) {
 };
 
 const updateCart = function(el, id) {
-  const quantity = el.value;
-  myCart.forEach(product => {
-    if (product.hasOwnProperty("id") && product.id == id) {
-      product.quantity = quantity;
-    }
-  });
+  const quantity = parseInt(el.value);
+  if (typeof(quantity) == 'number' && quantity > 0 && quantity < 10) {
+    myCart.forEach(product => {
+      if (product.hasOwnProperty("id") && product.id == id) {
+        product.quantity = quantity;
+      }
+    });
+  } else {
+    alert('Quantity must be between 1 - 9');
+  }
   cartBody.innerHTML = "";
   createCart(myCart);
 };
