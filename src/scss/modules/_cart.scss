@@ -1,0 +1,89 @@
+// Cart
+
+.cart {
+  padding-bottom: 10rem;
+
+  &__head,
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 2.5fr 2.5fr 1.5fr;
+    grid-gap: 2rem;
+    align-items: center;
+    @extend %border-radius;
+  }
+
+  &__head {
+    background-color: $black;
+    margin-bottom: 2rem;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-rows: 10rem;
+    grid-gap: 2rem;
+  }
+
+  &__title {
+    padding: 1rem;
+  }
+  
+
+  &__item:nth-child(even) {
+    background-color: $black;
+  }
+  
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @extend %border-radius;
+    overflow: hidden;
+  }
+
+  &__name {
+    font-size: $font-size-lg;
+    padding-bottom: 1rem;
+  }
+
+  &__desc {
+    color: $text-light;
+  }
+
+  &__price {
+    font-size: $font-size-lg;
+    &::before {
+      content: "$ ";
+    }
+  }
+
+  &__input {
+    width: 3.2rem;
+    height: 3.2rem;
+    line-height: 3.2rem;
+    background-color: $black;
+    color: $text-color;
+    font-family: $font-family;
+    border: none;
+    text-align: center;
+    @extend %border-radius;
+  }
+
+  &__item:nth-child(even) &__input {
+    background-color: $body-bg;
+  }
+
+  &__update {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__delete {
+    background-color: transparent;
+    border: none;
+    font-size: $font-size-xl;
+    color: $text-color;
+    outline: none;
+    cursor: pointer;
+  }
+}

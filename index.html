@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cart</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/dashboard.bundle.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container header__container">
+        <a href="javascript:void(0);" class="header__logo">
+          Order <strong>Form</strong>
+        </a>
+        <div class="header__cart">
+          <div class="header__cart__label">Cart</div>
+          <div class="header__cart__count">3</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main page">
+      <div class="container">
+        <!-- Page Header -->
+        <header class="page__header">
+          <h1 class="page__title">Your Cart</h1>
+          <div class="breadcrumb">
+            <a href="javascript:void(0)" class="breadcrumb__item">Home</a>
+            <a
+              href="javascript:void(0)"
+              class="breadcrumb__item breadcrumb__item--current"
+              >Checkout</a
+            >
+          </div>
+        </header>
+
+        <!-- Checkout Cart || Updates dynamically -->
+        <div class="cart">
+          <div class="cart__head">
+            <div class="cart__title"></div>
+            <div class="cart__title">Product</div>
+            <div class="cart__title">Price</div>
+            <div class="cart__title">Quantity</div>
+            <div class="cart__title text-center">Remove</div>
+          </div>
+          <div class="cart__body" id="cartBody">
+          </div>
+        </div>
+        <div class="checkout">
+          <div class="checkout__section comments">
+            <label for="additionalComments" class="checkout__label"
+              >Additional Comments</label
+            >
+            <textarea
+              name="additionalComments"
+              id="additionalComments"
+              rows="7"
+              class="checkout__textarea"
+            ></textarea>
+          </div>
+          <div class="checkout__section">
+            <div class="checkout__label">Delivery Info</div>
+            <div class="checkout__desc">
+              All orders will be sent by Special Delivery, which will be insured
+              and will need to be signed for. Allow 4-6 weeks for Delivery.
+            </div>
+          </div>
+          <div class="checkout__section">
+            <div class="price">
+            </div>
+            <div class="checkout__action">
+              <button type="button" class="btn checkout__btn">Checkout</button>
+              <div class="checkout__text">
+                or <a href="javascript:void(0);" class="checkout__link">Continue Shopping</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <!-- Scripts -->
+    <script src="/dist/dashboard.bundle.js" ></script>
+  </body>
+</html>

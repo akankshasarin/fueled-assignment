@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Jet Ski",
+    "id": "434556256",
+    "price": 1500,
+    "quantity": 1,
+    "image": "/src/images/jet-ski.jpg",
+    "imageAlt": "jet ski"
+  },
+  {
+    "name": "Bubble Wrap",
+    "id": "345245865",
+    "price": 400,
+    "quantity": 1,
+    "image": "/src/images/bubble-wrap.jpg",
+    "imageAlt": "bubble wrap"
+  },
+  {
+    "name": "Crock-Pot",
+    "id": "987123654",
+    "price": 55,
+    "quantity": 1,
+    "image": "/src/images/crock-pot.jpg",
+    "imageAlt": "crock pot"
+  }
+]

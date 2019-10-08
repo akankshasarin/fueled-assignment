@@ -1,0 +1,75 @@
+//Checkout
+
+.checkout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8rem;
+  margin-bottom: 5rem;
+
+  &__label {
+    display: block;
+    padding-bottom: 1rem;
+  }
+
+  &__textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: $black;
+    color: $text-color;
+    font-family: inherit;
+    border: none;
+    resize: none;
+    @extend %border-radius;
+  }
+
+  &__desc {
+    color: $text-light;
+    line-height: 2;
+  }
+
+  &__action {
+    display: grid;
+    justify-items: center;
+  }
+
+  &__btn {
+    margin: 1.5rem;
+    padding: 1.6rem 2.5rem;
+    font-size: $font-size-md;
+    font-weight: 700;
+    font-family: inherit;
+    background-color: $red;
+    color: $white;
+    border-radius: 0.5rem;
+    border: transparent;
+  }
+
+  &__text {
+    font-size: $font-size-sm;
+  }
+}
+
+.price {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    @extend %border-radius;
+
+    &--total {
+      background-color: $black;
+    }
+  }
+
+  &__label,
+  &__amount {
+    padding: 1rem;
+  }
+
+  &__amount {
+    font-weight: $bold;
+
+    &::before {
+      content: "$";
+    }
+  }
+}

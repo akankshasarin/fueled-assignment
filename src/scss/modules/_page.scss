@@ -1,0 +1,13 @@
+// Page
+
+.page {
+  &__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 15rem;
+  }
+  &__title {
+    font-size: $font-size-xl;
+  }
+}

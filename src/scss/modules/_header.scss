@@ -1,0 +1,52 @@
+// Header
+
+.header {
+  background-color: $header-bg;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 6.5rem;
+  }
+
+  &__logo,
+  &__cart {
+    display: inline-flex;
+  }
+
+  &__logo {
+    font-weight: $light;
+    font-size: $font-size-lg;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.3rem;
+
+    strong {
+      font-weight: $bold;
+    }
+  }
+
+  &__cart {
+    font-size: $font-size-md;
+
+    &__label,
+    &__count {
+      line-height: 2rem;
+    }
+
+    &__count {
+      margin-left: 0.5rem;
+      width: 2rem;
+      height: 2rem;
+      background-color: $white;
+      color: $dark-gray;
+      border-radius: 50%;
+      text-align: center;
+      font-weight: $bold;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+// Breadcrumb
+
+.breadcrumb {
+  background-color: $black;
+  border-radius: 0.4rem;
+
+  &__item {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    cursor: default;
+
+    &:not(&--current) {
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &::after {
+        position: absolute;
+        display: block;
+        content: "\2192";
+        top: 50%;
+        left: calc(100% - 0.5rem);
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
